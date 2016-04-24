@@ -16,8 +16,7 @@ pipeline = foldr1 (|||) labelledBlocks
     colours = map (`withOpacity` 0.75)
              [ red, orange, green, blue, purple ]
     stages = [ "IF", "ID", "EXE", "MEM", "WB"   ]
-    labelledBlocks = getZipList $
-                       block <$> ZipList stages <*> ZipList colours
+    labelledBlocks = zipWith block stages colours
 
 
 
