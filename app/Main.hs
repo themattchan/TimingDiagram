@@ -3,4 +3,4 @@ module Main where
 import Lib
 
 main :: IO ()
-main = draw example
+main = draw pipeline
